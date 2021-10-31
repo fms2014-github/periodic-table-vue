@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* scss Variables */
 $gridColumnWidth: 60;
 $gridRowWidth: 60;
@@ -6,7 +8,22 @@ $rowCount: 9;
 $backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
 $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 24px;
 /* scss Variables */
-
+body{ 
+    overflow: overlay; 
+} 
+::-webkit-scrollbar { 
+    width: 15px; 
+    height: 15px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 42%, 0.49);
+    border-radius: 100px;
+    border: {
+        width: 4px;
+        style: solid;
+        color: rgba(0,0,0,0)
+    };
+}
 body, div{
     margin: 0px;
     padding: 0px;
@@ -154,7 +171,10 @@ body, div{
         text-decoration: none;
     }
     .lightbox-background{
-        display:inline-block;
+        display:inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 280px;
         opacity: 0;
         background-color:rgba(50,50,50,0.65);
         position: absolute;
@@ -178,10 +198,6 @@ body, div{
             justify-content: space-evenly;
             width: 200px;
             height: 200px;
-            position: absolute;
-            top: 50vh;
-            left: 15vw;
-            transform: translateY(-50%);
             background-color: rgb(255,255,255);
             border: {
                 radius: 10px;
@@ -207,13 +223,9 @@ body, div{
             width: 30%;
             height: 70%;
             min-width: 600px;
-            max-width: 1200px;
+            max-width: 800px;
             min-height: 400px;
             max-height: 700px;
-            position: absolute;
-            top: 50vh;
-            right: 15vw;
-            transform: translateY(-50%);
             border: {
                 style: solid;
                 width: 4px;
@@ -233,7 +245,7 @@ body, div{
 
 @media screen and (max-width:768px) {
     $columnCount: 10;
-    $rowCount: 120/$columnCount;
+    $rowCount: math.div(120, $columnCount);
     $backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
     $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 24px;
 
@@ -381,10 +393,10 @@ body, div{
                 justify-content: space-evenly;
                 width: 200px;
                 height: 200px;
-                position: absolute;
-                top: 50vh;
-                left: 15vw;
-                transform: translateY(-50%);
+                position: fixed;
+                top: 5vh;
+                left: 50vw;
+                transform: translateX(-50%);
                 background-color: rgb(255,255,255);
                 border: {
                     radius: 10px;
@@ -407,16 +419,17 @@ body, div{
             }
             .atom-info{
                 display: inline-block;
-                width: 30%;
-                height: 70%;
-                min-width: 600px;
-                max-width: 1200px;
-                min-height: 400px;
-                max-height: 700px;
-                position: absolute;
-                top: 50vh;
-                right: 15vw;
-                transform: translateY(-50%);
+                width: 600px;
+                height: 550px;
+                min-width: auto;
+                max-width: auto;
+                min-height: auto;
+                max-height: auto;
+                position: fixed;
+                top: auto;
+                bottom: 5vh;
+                right: 50vw;
+                transform: translateX(50%);
                 border: {
                     style: solid;
                     width: 4px;
@@ -437,7 +450,7 @@ body, div{
 
 @media screen and (max-width:540px) {
     $columnCount: 6;
-    $rowCount: 120/$columnCount;
+    $rowCount: math.div(120, $columnCount);
     $backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
     $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 24px;
 
@@ -583,12 +596,12 @@ body, div{
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-evenly;
-                width: calc(100% - 8px);
-                height: calc(30% - 12px);
+                width: 200px;
+                height: 200px;
                 position: fixed;
-                top: 0px;
-                left: 0px;
-                transform: translateY(0%) translateX(0%);
+                top: 15%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
                 background-color: rgb(255,255,255);
                 border: {
                     radius: 10px;
@@ -611,18 +624,18 @@ body, div{
             }
             .atom-info{
                 display: inline-block;
-                width: calc(100% - 8px);
-                height: 70%;
-                min-width: calc(100% - 8px);
-                max-width: calc(100% - 8px);
-                min-height: 70%;
-                max-height: 70%;
+                width: 85vw;
+                height: 65vh;
+                min-width: auto;
+                max-width: auto;
+                min-height: auto;
+                max-height: auto;
                 position: fixed;
                 top:auto;
-                left:0px;
-                bottom: 0px;
+                left:50%;
+                bottom: 15%;
                 right: 0px;
-                transform: translateY(0%);
+                transform: translateX(-50%) translateY(20%);
                 overflow: scroll;
                 border: {
                     style: solid;
@@ -641,9 +654,9 @@ body, div{
     }
 }
 
-@media screen and (max-width:380px) {
+@media screen and (max-width:420px) {
     $columnCount: 5;
-    $rowCount: 120/$columnCount;
+    $rowCount: math.div(120, $columnCount);
     $backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
     $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 24px;
 
@@ -849,7 +862,7 @@ body, div{
 
 @media screen and (max-width:320px) {
     $columnCount: 4;
-    $rowCount: 120/$columnCount;
+    $rowCount: math.div(120, $columnCount);
     $backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
     $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 24px;
 
@@ -1025,10 +1038,10 @@ body, div{
                 display: inline-block;
                 width: calc(100% - 8px);
                 height: 70%;
-                min-width: calc(100% - 8px);
-                max-width: calc(100% - 8px);
-                min-height: 70%;
-                max-height: 70%;
+                min-width: auto;
+                max-width: auto;
+                min-height: auto;
+                max-height: auto;
                 position: fixed;
                 top:auto;
                 left:0px;
@@ -1055,7 +1068,7 @@ body, div{
 
 @media screen and (max-width:280px) {
     $columnCount: 3;
-    $rowCount: 120/$columnCount;
+    $rowCount: math.div(120, $columnCount);
     $backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
     $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 24px;
 
