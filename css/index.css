@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
 /* scss Variables */
 /* scss Variables */
 body {
@@ -5,8 +6,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -17,7 +18,7 @@ body::-webkit-scrollbar-thumb {
   border-color: rgba(0, 0, 0, 0);
 }
 
-body, div {
+body, div, h1 {
   margin: 0px;
   padding: 0px;
   height: auto;
@@ -25,6 +26,7 @@ body, div {
 
 #back-color {
   display: inline-flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -33,6 +35,12 @@ body, div {
   min-height: 644px;
   background: linear-gradient(60deg, #ffb048, #fddab1);
   background-repeat: no-repeat;
+}
+#back-color #title {
+  margin-bottom: 60px;
+  font-size: 28pt;
+  font-family: "NanumBarunGothic";
+  color: #bd5214;
 }
 #back-color #nomal-periodic {
   display: inline-grid;
@@ -734,6 +742,14 @@ body, div {
   margin: 0px;
   padding: 20px;
   color: #df7a0b;
+}
+#back-color #footer {
+  margin-top: 40px;
+  font-size: 10pt;
+  color: rgba(15, 15, 15, 0.85);
+}
+#back-color #footer #wikipedia {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
