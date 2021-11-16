@@ -255,81 +255,93 @@ body, div, h1{
     .lightbox-background-lanth {
         @extend .lightbox-background;
         mix-blend-mode: darken;
-        .overlay1{
+        .wrap{
             display: inline-block;
-            position: absolute;
-            bottom: 339px;
-            left: 472px;
-            width: 70px;
-            height: 70px;
-            background-color: rgb(255, 255, 255);
-            mix-blend-mode: luminosity;
-            border-radius: 8px;
-        }
-        .overlay2{
-            display: inline-block;
-            position: absolute;
-            bottom: 199px;
-            left: 472px;
-            width: 1050px;
-            height: 70px;
-            background-color: rgb(255, 255, 255);
-            mix-blend-mode: luminosity;
-            border-radius: 8px;
-        }
-        .pointer{
-            display: inline-block;
-            position: absolute;
-            left: 440px;
-            bottom: 234px;
-            width: 30px;
-            height: 136px;
-            border: {
-                style: solid;
-                width: 2px 0px 2px 2px;
-                color: rgb(223, 122, 11);
+            position: relative;
+            width: $backgroundWdith;
+            height: $backgroundHeight;
+            .overlay1{
+                display: inline-block;
+                position: absolute;
+                bottom: 302px;
+                left: 149px;
+                width: 70px;
+                height: 70px;
+                background-color: rgb(255, 255, 255);
+                mix-blend-mode: luminosity;
+                border-radius: 8px;
             }
-            
+            .overlay2{
+                display: inline-block;
+                position: absolute;
+                bottom: 162px;
+                left: 149px;
+                width: 1050px;
+                height: 70px;
+                background-color: rgb(255, 255, 255);
+                mix-blend-mode: luminosity;
+                border-radius: 8px;
+            }
+            .pointer{
+                display: inline-block;
+                position: absolute;
+                left: 117px;
+                bottom: 196px;
+                width: 30px;
+                height: 136px;
+                border: {
+                    style: solid;
+                    width: 2px 0px 2px 2px;
+                    color: rgb(223, 122, 11);
+                }
+                
+            }
         }
     }
     .lightbox-background-actin {
         @extend .lightbox-background;
         mix-blend-mode: darken;
-        .overlay1{
+        .wrap{
             display: inline-block;
-            position: absolute;
-            bottom: 269px;
-            left: 472px;
-            width: 70px;
-            height: 70px;
-            background-color: rgb(255, 255, 255);
-            mix-blend-mode: luminosity;
-            border-radius: 8px;
-        }
-        .overlay2{
-            display: inline-block;
-            position: absolute;
-            bottom: 129px;
-            left: 472px;
-            width: 1050px;
-            height: 70px;
-            background-color: rgb(255, 255, 255);
-            mix-blend-mode: luminosity;
-            border-radius: 8px;
-        }
-        .pointer{
-            display: inline-block;
-            position: absolute;
-            left: 440px;
-            bottom: 164px;
-            width: 30px;
-            height: 136px;
-            border: {
-                style: solid;
-                width: 2px 0px 2px 2px;
-                color: rgb(223, 122, 11);
+            position: relative;
+            width: $backgroundWdith;
+            height: $backgroundHeight;
+            .overlay1{
+                display: inline-block;
+                position: absolute;
+                bottom: 232px;
+                left: 149px;
+                width: 70px;
+                height: 70px;
+                background-color: rgb(255, 255, 255);
+                mix-blend-mode: luminosity;
+                border-radius: 8px;
             }
-            
+            .overlay2{
+                display: inline-block;
+                position: absolute;
+                bottom: 92px;
+                left: 149px;
+                width: 1050px;
+                height: 70px;
+                background-color: rgb(255, 255, 255);
+                mix-blend-mode: luminosity;
+                border-radius: 8px;
+            }
+            .pointer{
+                display: inline-block;
+                position: absolute;
+                left: 117px;
+                bottom: 129px;
+                width: 30px;
+                height: 136px;
+                border: {
+                    style: solid;
+                    width: 2px 0px 2px 2px;
+                    color: rgb(223, 122, 11);
+                }
+                
+            }
         }
     }
 

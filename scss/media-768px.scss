@@ -201,4 +201,11 @@ $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 244px;
         }
 
     }
+
+    .lightbox-background-lanth {
+        display:none;
+    }
+    .lightbox-background-actin {
+        display: none;
+    }
 }

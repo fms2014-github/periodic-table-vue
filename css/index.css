@@ -746,33 +746,39 @@ body, div, h1 {
 #back-color .lightbox-background-lanth {
   mix-blend-mode: darken;
 }
-#back-color .lightbox-background-lanth .overlay1 {
+#back-color .lightbox-background-lanth .wrap {
+  display: inline-block;
+  position: relative;
+  width: 1274px;
+  height: 864px;
+}
+#back-color .lightbox-background-lanth .wrap .overlay1 {
   display: inline-block;
   position: absolute;
-  bottom: 339px;
-  left: 472px;
+  bottom: 302px;
+  left: 149px;
   width: 70px;
   height: 70px;
   background-color: white;
   mix-blend-mode: luminosity;
   border-radius: 8px;
 }
-#back-color .lightbox-background-lanth .overlay2 {
+#back-color .lightbox-background-lanth .wrap .overlay2 {
   display: inline-block;
   position: absolute;
-  bottom: 199px;
-  left: 472px;
+  bottom: 162px;
+  left: 149px;
   width: 1050px;
   height: 70px;
   background-color: white;
   mix-blend-mode: luminosity;
   border-radius: 8px;
 }
-#back-color .lightbox-background-lanth .pointer {
+#back-color .lightbox-background-lanth .wrap .pointer {
   display: inline-block;
   position: absolute;
-  left: 440px;
-  bottom: 234px;
+  left: 117px;
+  bottom: 196px;
   width: 30px;
   height: 136px;
   border-style: solid;
@@ -782,33 +788,39 @@ body, div, h1 {
 #back-color .lightbox-background-actin {
   mix-blend-mode: darken;
 }
-#back-color .lightbox-background-actin .overlay1 {
+#back-color .lightbox-background-actin .wrap {
+  display: inline-block;
+  position: relative;
+  width: 1274px;
+  height: 864px;
+}
+#back-color .lightbox-background-actin .wrap .overlay1 {
   display: inline-block;
   position: absolute;
-  bottom: 269px;
-  left: 472px;
+  bottom: 232px;
+  left: 149px;
   width: 70px;
   height: 70px;
   background-color: white;
   mix-blend-mode: luminosity;
   border-radius: 8px;
 }
-#back-color .lightbox-background-actin .overlay2 {
+#back-color .lightbox-background-actin .wrap .overlay2 {
   display: inline-block;
   position: absolute;
-  bottom: 129px;
-  left: 472px;
+  bottom: 92px;
+  left: 149px;
   width: 1050px;
   height: 70px;
   background-color: white;
   mix-blend-mode: luminosity;
   border-radius: 8px;
 }
-#back-color .lightbox-background-actin .pointer {
+#back-color .lightbox-background-actin .wrap .pointer {
   display: inline-block;
   position: absolute;
-  left: 440px;
-  bottom: 164px;
+  left: 117px;
+  bottom: 129px;
   width: 30px;
   height: 136px;
   border-style: solid;
@@ -1575,6 +1587,12 @@ body, div, h1 {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
+  }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
   }
 }
 @media screen and (max-width: 715px) {
@@ -2359,6 +2377,12 @@ body, div, h1 {
     padding: 20px;
     color: #df7a0b;
   }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
+  }
 }
 @media screen and (max-width: 650px) {
   #back-color {
@@ -3111,6 +3135,12 @@ body, div, h1 {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
+  }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
   }
 }
 @media screen and (max-width: 575px) {
@@ -3897,6 +3927,12 @@ body, div, h1 {
     padding: 20px;
     color: #df7a0b;
   }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
+  }
 }
 @media screen and (max-width: 495px) {
   #back-color {
@@ -4651,6 +4687,12 @@ body, div, h1 {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
+  }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
   }
 }
 @media screen and (max-width: 434px) {
@@ -5407,6 +5449,12 @@ body, div, h1 {
     padding: 20px;
     color: #df7a0b;
   }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
+  }
 }
 @media screen and (max-width: 365px) {
   #back-color {
@@ -6162,6 +6210,12 @@ body, div, h1 {
     padding: 20px;
     color: #df7a0b;
   }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
+  }
 }
 @media screen and (max-width: 294px) {
   #back-color {
@@ -6916,6 +6970,12 @@ body, div, h1 {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
+  }
+  #back-color .lightbox-background-lanth {
+    display: none;
+  }
+  #back-color .lightbox-background-actin {
+    display: none;
   }
 }
 
