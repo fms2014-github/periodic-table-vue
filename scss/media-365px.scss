@@ -15,6 +15,14 @@ $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 244px;
     min-height: $backgroundHeight;
     background: linear-gradient(60deg, rgb(255, 176, 72), rgb(253, 218, 177));
     background-repeat: no-repeat;
+    #title{
+        margin-bottom: 60px;
+        font: {
+            size: 22pt;
+            family: 'NanumBarunGothic';
+        }
+        color: rgb(189, 82, 20);
+    }
     #nomal-periodic{
         display: inline-grid;
         padding: 12px;

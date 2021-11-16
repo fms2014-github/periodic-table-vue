@@ -5468,6 +5468,12 @@ body, div, h1 {
     background: linear-gradient(60deg, #ffb048, #fddab1);
     background-repeat: no-repeat;
   }
+  #back-color #title {
+    margin-bottom: 60px;
+    font-size: 22pt;
+    font-family: "NanumBarunGothic";
+    color: #bd5214;
+  }
   #back-color #nomal-periodic {
     display: inline-grid;
     padding: 12px;
@@ -6228,6 +6234,12 @@ body, div, h1 {
     min-height: 3034px;
     background: linear-gradient(60deg, #ffb048, #fddab1);
     background-repeat: no-repeat;
+  }
+  #back-color #title {
+    margin-bottom: 60px;
+    font-size: 18pt;
+    font-family: "NanumBarunGothic";
+    color: #bd5214;
   }
   #back-color #nomal-periodic {
     display: inline-grid;
