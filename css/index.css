@@ -679,7 +679,7 @@ body, div, h1 {
   color: inherit;
   text-decoration: none;
 }
-#back-color .lightbox-background {
+#back-color .lightbox-background, #back-color .lightbox-background-actin, #back-color .lightbox-background-lanth {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -695,13 +695,13 @@ body, div, h1 {
   min-height: 864px;
   z-index: -99;
 }
-#back-color .lightbox-background:target {
+#back-color .lightbox-background:target, #back-color .lightbox-background-actin:target, #back-color .lightbox-background-lanth:target {
   opacity: 1;
   transition-property: opacity;
   transition-duration: 350ms;
   z-index: 10;
 }
-#back-color .lightbox-background .atom-icon {
+#back-color .lightbox-background .atom-icon, #back-color .lightbox-background-actin .atom-icon, #back-color .lightbox-background-lanth .atom-icon {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -715,16 +715,16 @@ body, div, h1 {
   border-style: solid;
   color: #df7a0b;
 }
-#back-color .lightbox-background .atom-icon .atom-name {
+#back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name {
   font-size: 64px;
 }
-#back-color .lightbox-background .atom-icon .atom-full-name {
+#back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name {
   font-size: 24px;
 }
-#back-color .lightbox-background .atom-icon .atom-num {
+#back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num {
   font-size: 18px;
 }
-#back-color .lightbox-background .atom-info {
+#back-color .lightbox-background .atom-info, #back-color .lightbox-background-actin .atom-info, #back-color .lightbox-background-lanth .atom-info {
   display: inline-block;
   width: 30%;
   height: 70%;
@@ -738,10 +738,82 @@ body, div, h1 {
   border-radius: 10px;
   background-color: white;
 }
-#back-color .lightbox-background .atom-info p {
+#back-color .lightbox-background .atom-info p, #back-color .lightbox-background-actin .atom-info p, #back-color .lightbox-background-lanth .atom-info p {
   margin: 0px;
   padding: 20px;
   color: #df7a0b;
+}
+#back-color .lightbox-background-lanth {
+  mix-blend-mode: darken;
+}
+#back-color .lightbox-background-lanth .overlay1 {
+  display: inline-block;
+  position: absolute;
+  bottom: 339px;
+  left: 472px;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  mix-blend-mode: luminosity;
+  border-radius: 8px;
+}
+#back-color .lightbox-background-lanth .overlay2 {
+  display: inline-block;
+  position: absolute;
+  bottom: 199px;
+  left: 472px;
+  width: 1050px;
+  height: 70px;
+  background-color: white;
+  mix-blend-mode: luminosity;
+  border-radius: 8px;
+}
+#back-color .lightbox-background-lanth .pointer {
+  display: inline-block;
+  position: absolute;
+  left: 440px;
+  bottom: 234px;
+  width: 30px;
+  height: 136px;
+  border-style: solid;
+  border-width: 2px 0px 2px 2px;
+  border-color: #df7a0b;
+}
+#back-color .lightbox-background-actin {
+  mix-blend-mode: darken;
+}
+#back-color .lightbox-background-actin .overlay1 {
+  display: inline-block;
+  position: absolute;
+  bottom: 269px;
+  left: 472px;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  mix-blend-mode: luminosity;
+  border-radius: 8px;
+}
+#back-color .lightbox-background-actin .overlay2 {
+  display: inline-block;
+  position: absolute;
+  bottom: 129px;
+  left: 472px;
+  width: 1050px;
+  height: 70px;
+  background-color: white;
+  mix-blend-mode: luminosity;
+  border-radius: 8px;
+}
+#back-color .lightbox-background-actin .pointer {
+  display: inline-block;
+  position: absolute;
+  left: 440px;
+  bottom: 164px;
+  width: 30px;
+  height: 136px;
+  border-style: solid;
+  border-width: 2px 0px 2px 2px;
+  border-color: #df7a0b;
 }
 #back-color #footer {
   margin-top: 40px;
@@ -1434,7 +1506,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -1447,13 +1519,13 @@ body, div, h1 {
     min-height: 1074px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -1471,16 +1543,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: 600px;
     height: 550px;
@@ -1499,7 +1571,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
@@ -2217,7 +2289,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -2230,13 +2302,13 @@ body, div, h1 {
     min-height: 1214px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -2254,16 +2326,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: 600px;
     height: 550px;
@@ -2282,7 +2354,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
@@ -2970,7 +3042,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -2983,13 +3055,13 @@ body, div, h1 {
     min-height: 1284px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -3007,16 +3079,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: 600px;
     height: 550px;
@@ -3035,7 +3107,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
@@ -3049,7 +3121,7 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 504px;
-    min-height: 1274px;
+    min-height: 1494px;
     background: linear-gradient(60deg, #ffb048, #fddab1);
     background-repeat: no-repeat;
   }
@@ -3753,7 +3825,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -3763,16 +3835,16 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 504px;
-    min-height: 1274px;
+    min-height: 1494px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -3790,16 +3862,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: 85vw;
     height: 65vh;
@@ -3820,7 +3892,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
@@ -3834,7 +3906,7 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 434px;
-    min-height: 1414px;
+    min-height: 1634px;
     background: linear-gradient(60deg, #ffb048, #fddab1);
     background-repeat: no-repeat;
   }
@@ -4508,7 +4580,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -4518,16 +4590,16 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 434px;
-    min-height: 1414px;
+    min-height: 1634px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -4545,16 +4617,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: calc(100% - 8px);
     height: 70%;
@@ -4575,7 +4647,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
@@ -4589,7 +4661,7 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 364px;
-    min-height: 1694px;
+    min-height: 1914px;
     background: linear-gradient(60deg, #ffb048, #fddab1);
     background-repeat: no-repeat;
   }
@@ -5263,7 +5335,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -5273,16 +5345,16 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 364px;
-    min-height: 1694px;
+    min-height: 1914px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -5300,16 +5372,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: calc(100% - 8px);
     height: 70%;
@@ -5330,7 +5402,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
@@ -5344,7 +5416,7 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 294px;
-    min-height: 2114px;
+    min-height: 2334px;
     background: linear-gradient(60deg, #ffb048, #fddab1);
     background-repeat: no-repeat;
   }
@@ -6018,7 +6090,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -6028,16 +6100,16 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 294px;
-    min-height: 2114px;
+    min-height: 2334px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -6055,16 +6127,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: calc(100% - 8px);
     height: 70%;
@@ -6085,7 +6157,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;
@@ -6099,7 +6171,7 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 224px;
-    min-height: 2814px;
+    min-height: 3034px;
     background: linear-gradient(60deg, #ffb048, #fddab1);
     background-repeat: no-repeat;
   }
@@ -6773,7 +6845,7 @@ body, div, h1 {
     color: inherit;
     text-decoration: none;
   }
-  #back-color .lightbox-background {
+  #back-color .lightbox-background, #back-color .lightbox-background-lanth, #back-color .lightbox-background-actin {
     display: inline-block;
     opacity: 0;
     background-color: rgba(50, 50, 50, 0.65);
@@ -6783,16 +6855,16 @@ body, div, h1 {
     width: 100vw;
     height: 100vh;
     min-width: 224px;
-    min-height: 2814px;
+    min-height: 3034px;
     z-index: -99;
   }
-  #back-color .lightbox-background:target {
+  #back-color .lightbox-background:target, #back-color .lightbox-background-lanth:target, #back-color .lightbox-background-actin:target {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 350ms;
     z-index: 10;
   }
-  #back-color .lightbox-background .atom-icon {
+  #back-color .lightbox-background .atom-icon, #back-color .lightbox-background-lanth .atom-icon, #back-color .lightbox-background-actin .atom-icon {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -6810,16 +6882,16 @@ body, div, h1 {
     border-style: solid;
     color: #df7a0b;
   }
-  #back-color .lightbox-background .atom-icon .atom-name {
+  #back-color .lightbox-background .atom-icon .atom-name, #back-color .lightbox-background-lanth .atom-icon .atom-name, #back-color .lightbox-background-actin .atom-icon .atom-name {
     font-size: 64px;
   }
-  #back-color .lightbox-background .atom-icon .atom-full-name {
+  #back-color .lightbox-background .atom-icon .atom-full-name, #back-color .lightbox-background-lanth .atom-icon .atom-full-name, #back-color .lightbox-background-actin .atom-icon .atom-full-name {
     font-size: 24px;
   }
-  #back-color .lightbox-background .atom-icon .atom-num {
+  #back-color .lightbox-background .atom-icon .atom-num, #back-color .lightbox-background-lanth .atom-icon .atom-num, #back-color .lightbox-background-actin .atom-icon .atom-num {
     font-size: 18px;
   }
-  #back-color .lightbox-background .atom-info {
+  #back-color .lightbox-background .atom-info, #back-color .lightbox-background-lanth .atom-info, #back-color .lightbox-background-actin .atom-info {
     display: inline-block;
     width: calc(100% - 8px);
     height: 70%;
@@ -6840,7 +6912,7 @@ body, div, h1 {
     border-radius: 10px;
     background-color: white;
   }
-  #back-color .lightbox-background .atom-info p {
+  #back-color .lightbox-background .atom-info p, #back-color .lightbox-background-lanth .atom-info p, #back-color .lightbox-background-actin .atom-info p {
     margin: 0px;
     padding: 20px;
     color: #df7a0b;

@@ -3,7 +3,7 @@
 $columnCount: 5;
 $rowCount: ceil(math.div(120, $columnCount));
 $backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
-$backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 24px;
+$backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 244px;
 
 #back-color{
     display:inline-flex;

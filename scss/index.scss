@@ -6,7 +6,7 @@ $gridColumnWidth: 60;
 $gridRowWidth: 60;
 $columnCount: 18;
 $rowCount: 9;
-$backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1)* 10 + 24px;
+$backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1) * 10 + 24px;
 $backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 244px;
 /* scss Variables */
 body{ 
@@ -250,6 +250,87 @@ body, div, h1{
             }
         }
 
+    }
+
+    .lightbox-background-lanth {
+        @extend .lightbox-background;
+        mix-blend-mode: darken;
+        .overlay1{
+            display: inline-block;
+            position: absolute;
+            bottom: 339px;
+            left: 472px;
+            width: 70px;
+            height: 70px;
+            background-color: rgb(255, 255, 255);
+            mix-blend-mode: luminosity;
+            border-radius: 8px;
+        }
+        .overlay2{
+            display: inline-block;
+            position: absolute;
+            bottom: 199px;
+            left: 472px;
+            width: 1050px;
+            height: 70px;
+            background-color: rgb(255, 255, 255);
+            mix-blend-mode: luminosity;
+            border-radius: 8px;
+        }
+        .pointer{
+            display: inline-block;
+            position: absolute;
+            left: 440px;
+            bottom: 234px;
+            width: 30px;
+            height: 136px;
+            border: {
+                style: solid;
+                width: 2px 0px 2px 2px;
+                color: rgb(223, 122, 11);
+            }
+            
+        }
+    }
+    .lightbox-background-actin {
+        @extend .lightbox-background;
+        mix-blend-mode: darken;
+        .overlay1{
+            display: inline-block;
+            position: absolute;
+            bottom: 269px;
+            left: 472px;
+            width: 70px;
+            height: 70px;
+            background-color: rgb(255, 255, 255);
+            mix-blend-mode: luminosity;
+            border-radius: 8px;
+        }
+        .overlay2{
+            display: inline-block;
+            position: absolute;
+            bottom: 129px;
+            left: 472px;
+            width: 1050px;
+            height: 70px;
+            background-color: rgb(255, 255, 255);
+            mix-blend-mode: luminosity;
+            border-radius: 8px;
+        }
+        .pointer{
+            display: inline-block;
+            position: absolute;
+            left: 440px;
+            bottom: 164px;
+            width: 30px;
+            height: 136px;
+            border: {
+                style: solid;
+                width: 2px 0px 2px 2px;
+                color: rgb(223, 122, 11);
+            }
+            
+        }
     }
 
     #footer{
