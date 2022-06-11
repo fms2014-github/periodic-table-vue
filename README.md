@@ -2,4 +2,4 @@
 
 HTML과 CSS만을 사용
 
-CSS 전처리기는 SASS를 사용
+CSS 전처리기는 SASS(SCSS)를 사용
