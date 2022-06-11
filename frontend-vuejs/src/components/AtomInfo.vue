@@ -6,7 +6,12 @@
 
 <script>
 export default {
-
+  props:{
+    atomInfo:{
+      type: String,
+      require: true
+    }
+  }
 }
 </script>
 
