@@ -1,31 +1,23 @@
 <template>
   <div id="app">
     <periodic-table/>
+    <atom-detail-info/>
   </div>
 </template>
 
 <script>
 import PeriodicTable from './views/PeriodicTable.vue'
+import AtomDetailInfo from './views/AtomDetailInfo.vue'
 
 export default {
     components:{
-        PeriodicTable
+        PeriodicTable,
+        AtomDetailInfo
     }
 }
 </script>
 
 <style lang="scss">
-@use "sass:math";
-@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
-
-/* scss Variables */
-$gridColumnWidth: 60;
-$gridRowWidth: 60;
-$columnCount: 18;
-$rowCount: 9;
-$backgroundWdith: ($gridColumnWidth * $columnCount) + ($columnCount - 1) * 10 + 24px;
-$backgroundHeight: ($gridRowWidth * $rowCount) +($rowCount - 1) * 10 + 244px;
-/* scss Variables */
 body{ 
     overflow: overlay;
 } 

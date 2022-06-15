@@ -2,7 +2,7 @@
   <div class="atom-detail-info">
     <light-box>
         <atom-icon :atomName="atomName" :atomNum="atomNum" :atomFullName="atomFullName" />
-        <atom-info />
+        <atom-info :atomInfo="atomInfo"/>
     </light-box>
   </div>
 </template>
@@ -17,7 +17,8 @@ export default {
         return {
             atomName,
             atomNum,
-            atomFullName
+            atomFullName,
+            atomInfo
         }
     },
     components:{
@@ -28,6 +29,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
