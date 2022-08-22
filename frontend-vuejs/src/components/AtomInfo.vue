@@ -1,20 +1,18 @@
 <template>
   <div class="atom-info">
-      {{atomInfo}}
+    {{ atomInfo }}
   </div>
 </template>
 
 <script>
 export default {
-  props:{
-    atomInfo:{
+  props: {
+    atomInfo: {
       type: String,
-      require: true
-    }
-  }
-}
+      require: true,
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

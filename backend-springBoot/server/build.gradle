@@ -1,0 +1,68 @@
+
+buildscript {
+    ext {
+        queryDslVersion = "5.0.0.M1"
+    }
+}
+
+plugins {
+	id 'org.springframework.boot' version '2.6.8'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.periodic'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.projectlombok:lombok'
+    // Querydsl
+    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+    annotationProcessor(
+            "javax.persistence:javax.persistence-api",
+            "javax.annotation:javax.annotation-api",
+            "com.querydsl:querydsl-apt:${queryDslVersion}:jpa")
+
+    // https://mvnrepository.com/artifact/com.querydsl/querydsl-core
+    implementation "com.querydsl:querydsl-core:${queryDslVersion}"
+
+
+	// https://mvnrepository.com/artifact/org.jsoup/jsoup
+	implementation 'org.jsoup:jsoup:1.14.3'
+
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-logging
+	implementation 'org.springframework.boot:spring-boot-starter-logging:2.7.0'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// QueryDSL
+sourceSets {
+    main {
+        java {
+            srcDirs = ["build/generated/sources/annotationProcessor/java/main", "src/main/java"]
+        }
+    }
+}
+
+// clean task 실행시 QClass 삭제
+clean {
+    delete file('src/main/generated') // 인텔리제이 Annotation processor 생성물 생성 위치
+}

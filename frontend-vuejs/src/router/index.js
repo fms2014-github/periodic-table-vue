@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import PeriodicTable from "@/views/PeriodicTable"
-import AtomDetailInfo from "@/views/AtomDetailInfo"
+import PeriodicTable from "@/views/PeriodicTable";
+import AtomDetailInfo from "@/views/AtomDetailInfo";
 
 Vue.use(VueRouter);
 

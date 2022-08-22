@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/private_project
+    username: root
+    password: "!naver8750"
+
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    open-in-view: true
+    properties:
+      hibernate:
+      format-sql: true
+      show-sql: true
+
+    
