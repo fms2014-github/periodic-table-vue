@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.periodic.server.model.dto.PeriodicTableRes;
+import com.periodic.server.model.projection.PeriodicTableProj;
 import com.periodic.server.model.entity.Periodic;
 import com.periodic.server.repository.JpaRepository.PeriodicTableRepository;
 
@@ -18,7 +18,7 @@ public class periodicTableServiceImpl implements PeriodicTableService {
     private final PeriodicTableRepository periodicTableRepository;
 
     @Override
-    public List<PeriodicTableRes> atomList() throws Exception {
+    public List<PeriodicTableProj> atomList() throws Exception {
         // TODO Auto-generated method stub
 
         return periodicTableRepository.selectAtomList();

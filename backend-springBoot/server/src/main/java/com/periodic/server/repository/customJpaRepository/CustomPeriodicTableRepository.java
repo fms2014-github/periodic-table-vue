@@ -2,8 +2,8 @@ package com.periodic.server.repository.customJpaRepository;
 
 import java.util.List;
 
-import com.periodic.server.model.dto.PeriodicTableRes;
+import com.periodic.server.model.projection.PeriodicTableProj;
 
 public interface CustomPeriodicTableRepository {
-    List<PeriodicTableRes> selectAtomList();
+    List<PeriodicTableProj> selectAtomList();
 }

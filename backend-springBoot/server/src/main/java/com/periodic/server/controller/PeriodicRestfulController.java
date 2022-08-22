@@ -30,9 +30,12 @@ public class PeriodicRestfulController {
     private final PeriodicTableService service;
 
     @PostMapping("/atom/table/list")
-    public List<PeriodicTableRes> atomList(HttpServletRequest request) throws Exception {
+    public PeriodicTableRes atomList() throws Exception {
+        PeriodicTableRes result = new PeriodicTableRes();
 
-        return service.atomList();
+        result.setTableData(service.atomList());
+
+        return result;
     }
 
     @GetMapping("/test")
