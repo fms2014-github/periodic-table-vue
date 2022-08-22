@@ -19,10 +19,10 @@ import AtomInfo from "@/components/AtomInfo.vue";
 export default {
   data: () => {
     return {
-      atomName,
-      atomNum,
-      atomFullName,
-      atomInfo,
+      atomName: "",
+      atomNum: "",
+      atomFullName: "",
+      atomInfo: "",
     };
   },
   components: {
@@ -30,7 +30,13 @@ export default {
     AtomIcon,
     AtomInfo,
   },
+  mounted(){
+    this.atomName = this.$route.params.atomName;
+    console.log("AtomDetailInfo", this.$route.params);
+  }
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+
+</style>

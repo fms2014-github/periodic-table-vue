@@ -1,24 +1,32 @@
 <template>
   <div id="app">
-    <periodic-table :atomsProps="testResult1"/>
-    <atom-detail-info />
+    <periodic-table :atomsProps="atomData"/>
+    <router-view class="lightbox-background" name="AtomDetailInfo" />
   </div>
 </template>
 
 <script>
 import PeriodicTable from "./views/PeriodicTable.vue";
-import AtomDetailInfo from "./views/AtomDetailInfo.vue";
 import axios from "axios";
 
 export default {
+  data(){
+    return{
+      atomData: []
+    }
+  },
   components: {
     PeriodicTable,
-    AtomDetailInfo,
+  },
+  async mounted() {
+    let getAtomData = (await axios.post("http://localhost:8080/api/v1/atom/table/list")).data;
+
+    this.atomData = getAtomData.tableData;
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 body {
   overflow: overlay;
 }
@@ -36,11 +44,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-body,
-div,
-h1 {
-  margin: 0px;
-  padding: 0px;
-  height: auto;
+.lightbox-background{
+  position: absolute;
+  top: 0px;
+  width: #{$backgroundWdith};
+  height: 100vh;
+  background-color: rgba(50,50,50,0.65);
 }
+
 </style>

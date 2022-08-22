@@ -14,8 +14,10 @@ const routes = [
   {
     path: "/AtomDetailInfo/:atomName",
     name: "AtomDetailInfo",
-    component: AtomDetailInfo,
-  },
+    components: {
+      AtomDetailInfo,
+    }
+  }
 ];
 
 const router = new VueRouter({

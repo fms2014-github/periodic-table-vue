@@ -18,7 +18,7 @@ import AtomTableCell from "../components/AtomTableCell.vue";
 
 export default {
   props:['atomsProps'],
-  data: () => {
+  data() {
     return {
       
     };
@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #periodic-table {
   display: inline-flex;
   flex-direction: column;
@@ -80,7 +80,6 @@ export default {
       a:focus,
       a:hover {
         color: inherit;
-        text-decoration: none;
       }
       .content {
         display: inline-flex;
