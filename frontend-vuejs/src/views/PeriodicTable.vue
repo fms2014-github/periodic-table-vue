@@ -6,9 +6,12 @@
         v-for="atom in atomsProps"
         :key="atom.id"
         :to="{ name: 'AtomDetailInfo', params: { atomName: atom.atomName } }"
+        :class="otherAtom(atom.atomNum)"
       >
         <atom-table-cell :atomName="atom.atomName" :atomNum="atom.atomNum" />
       </router-link>
+      <atom-table-cell class="cell-lanth" :atomName="'Lanthanoids'" :atomNum="'57 ~ 71'" />
+      <atom-table-cell class="cell-actin" :atomName="'Actinoids'" :atomNum="'89 ~ 103'" />
     </div>
   </div>
 </template>
@@ -22,6 +25,17 @@ export default {
     return {
       
     };
+  },
+  methods: {
+    otherAtom(atomNum){
+      if(atomNum >= 57 && atomNum <= 71){
+        return "cell-lanth-"+(atomNum - 56)
+      }else if(atomNum >= 89 && atomNum <= 103){
+        return "cell-actin-"+(atomNum - 88)
+      }else{
+        return "cell-"+atomNum;
+      }
+    }
   },
   components: {
     AtomTableCell,
@@ -56,56 +70,7 @@ export default {
     grid-template-columns: repeat(18, #{$gridColumnWidth}px);
     grid-template-rows: repeat(9, #{$gridColumnWidth}px);
     grid-gap: 10px;
-    .cell-form {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      border-width: 2px;
-      border-style: solid;
-      border-color: rgb(255, 149, 11);
-      border-radius: 10px;
-      background-color: white;
-      color: rgb(223, 122, 11);
-      box-shadow: 0px 0px 12px 2px rgba(182, 148, 111, 0.726);
-      &:hover {
-        box-shadow: 0px 0px 12px 2px rgb(182, 94, 0);
-        transition-property: box-shadow;
-        transition-duration: 180ms;
-        transition-delay: 50ms;
-        background-color: rgb(241, 153, 58);
-        color: rgb(255, 255, 255);
-      }
-      a:link,
-      a:visited,
-      a:focus,
-      a:hover {
-        color: inherit;
-      }
-      .content {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
-        span {
-          display: inline-block;
-          width: 100%;
-          text-align: center;
-          color: inherit;
-        }
-        .atom-name {
-          font-size: 130%;
-        }
-        .atom-num {
-          font-size: 90%;
-        }
-      }
-    }
     $column: 1;
     $row: 1;
     $atom-num: 1;
@@ -141,22 +106,6 @@ export default {
       }
       $column: 1;
       $row: $row + 1;
-    }
-    .cell-lanth {
-      grid-column: 3;
-      grid-row: 6;
-      .content .atom-name,
-      .content .atom-num {
-        font-size: 8pt;
-      }
-    }
-    .cell-actin {
-      grid-column: 3;
-      grid-row: 7;
-      .content .atom-name,
-      .content .atom-num {
-        font-size: 8pt;
-      }
     }
 
     $atom-num: 1;

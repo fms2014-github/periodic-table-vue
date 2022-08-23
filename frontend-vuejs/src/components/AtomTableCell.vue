@@ -22,7 +22,9 @@ export default {
 
 <style lang="scss" scoped>
 .atom-table-cell{
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
   border-width: 2px;
@@ -40,10 +42,31 @@ export default {
   }           
   .atom-name{
       font-size: 130%;
-      
+      line-height: 90%;
   }
   .atom-num{
       font-size: 90%;
+      line-height: 130%;
+  }
+}
+
+.cell-lanth {
+  grid-column: 3;
+  grid-row: 6;
+  .atom-name,
+  .atom-num {
+    font-size: 8pt;
+    line-height: 8pt;
+  }
+}
+.cell-actin {
+  grid-column: 3;
+  grid-row: 7;
+  .atom-name,
+  .atom-num {
+    font-size: 8pt;
+    line-height: 8pt;
+    vertical-align: middle;
   }
 }
 </style>
