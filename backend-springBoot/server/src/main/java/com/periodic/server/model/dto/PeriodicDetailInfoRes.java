@@ -1,9 +1,7 @@
 package com.periodic.server.model.dto;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.periodic.server.model.projection.PeriodicTableProj;
+import com.periodic.server.model.entity.Periodic;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +11,6 @@ import lombok.ToString;
 @Getter
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PeriodicTableRes {
-    private List<PeriodicTableProj> tableData;
+public class PeriodicDetailInfoRes {
+    private Periodic periodic;
 }

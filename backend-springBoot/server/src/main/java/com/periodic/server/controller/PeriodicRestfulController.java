@@ -6,10 +6,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.periodic.server.model.dto.PeriodicDetailInfoRes;
 import com.periodic.server.model.dto.PeriodicTableRes;
 import com.periodic.server.model.entity.Periodic;
 import com.periodic.server.service.PeriodicTableService;
@@ -25,12 +27,22 @@ public class PeriodicRestfulController {
     private final PeriodicTableService service;
 
     @PostMapping("/atom/table/list")
-    public PeriodicTableRes atomList() throws Exception {
+    public PeriodicTableRes atomList() {
         PeriodicTableRes result = new PeriodicTableRes();
 
         result.setTableData(service.atomList());
 
         return result;
+    }
+
+    @PostMapping("/atom/detail/{atomName}")
+    public Periodic atomDetailInfo(@PathVariable("atomName") String atomName) {
+        PeriodicDetailInfoRes result = new PeriodicDetailInfoRes();
+        Periodic periodic = service.atomDetail(atomName);
+
+        result.setPeriodic(periodic);
+
+        return periodic;
     }
 
     @GetMapping("/test")

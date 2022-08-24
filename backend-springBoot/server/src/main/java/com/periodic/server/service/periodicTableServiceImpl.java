@@ -19,7 +19,7 @@ public class periodicTableServiceImpl implements PeriodicTableService {
     private final PeriodicTableRepository periodicTableRepository;
 
     @Override
-    public List<PeriodicTableProj> atomList() throws Exception {
+    public List<PeriodicTableProj> atomList() {
         // TODO Auto-generated method stub
         List<PeriodicTableProj> beforeSortList = periodicTableRepository.selectAtomList();
 
@@ -42,20 +42,15 @@ public class periodicTableServiceImpl implements PeriodicTableService {
     }
 
     @Override
-    public Periodic atomDetail(Object o1) throws Exception {
+    public Periodic atomDetail(String atomName) {
         // TODO Auto-generated method stub
-        return null;
-    }
 
-    @Override
-    public Periodic atomInfo(Object o1) throws Exception {
-        // TODO Auto-generated method stub
-        return null;
+        return periodicTableRepository.selectDetailInfo(atomName);
     }
 
     @Override
     @Transactional
-    public int insertPeriodic(Periodic periodic) throws Exception {
+    public int insertPeriodic(Periodic periodic) {
         // TODO Auto-generated method stub
         periodicTableRepository.save(periodic);
         return 0;

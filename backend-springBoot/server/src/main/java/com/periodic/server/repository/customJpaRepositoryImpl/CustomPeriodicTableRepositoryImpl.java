@@ -33,4 +33,12 @@ public class CustomPeriodicTableRepositoryImpl extends QuerydslRepositorySupport
                 .from(periodic).fetch();
     }
 
+    @Override
+    public Periodic selectDetailInfo(String atomName) {
+        QPeriodic periodic = QPeriodic.periodic;
+        queryFactory = new JPAQueryFactory(getEntityManager());
+        return queryFactory.select(periodic)
+                .from(periodic).where(periodic.atomName.eq(atomName)).fetchOne();
+    }
+
 }

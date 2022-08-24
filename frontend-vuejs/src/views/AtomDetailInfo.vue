@@ -2,11 +2,11 @@
   <div class="atom-detail-info">
     <light-box>
       <atom-icon
-        :atomName="atomName"
-        :atomNum="atomNum"
-        :atomFullName="atomFullName"
+        :atomName="periodic.atomName"
+        :atomNum="periodic.atomNum"
+        :atomFullName="periodic.atomFullName"
       />
-      <atom-info :atomInfo="atomInfo" />
+      <atom-info :atomInfo="periodic.atomInfo" />
     </light-box>
   </div>
 </template>
@@ -15,14 +15,13 @@
 import LightBox from "@/components/LightBox.vue";
 import AtomIcon from "@/components/AtomIcon.vue";
 import AtomInfo from "@/components/AtomInfo.vue";
+import axios from "axios";
 
 export default {
-  data: () => {
+  data() {
     return {
-      atomName: "",
-      atomNum: "",
-      atomFullName: "",
-      atomInfo: "",
+      periodic: {
+      }
     };
   },
   components: {
@@ -30,9 +29,18 @@ export default {
     AtomIcon,
     AtomInfo,
   },
-  mounted(){
-    this.atomName = this.$route.params.atomName;
-    console.log("AtomDetailInfo", this.$route.params);
+  mounted() {
+    let vm = this;
+
+    axios.post("http://localhost:8080/api/v1/atom/detail/" + this.$route.params.atomName).then(function (res) {
+      let axiosData = res.data;
+
+     Object.keys(axiosData).forEach((key) => {
+      vm.$set(vm.$data.periodic, key, axiosData[key]);
+     });
+    });
+
+    console.log(vm.periodic);
   }
 };
 </script>

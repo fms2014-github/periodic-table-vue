@@ -6,12 +6,10 @@ import com.periodic.server.model.projection.PeriodicTableProj;
 import com.periodic.server.model.entity.Periodic;
 
 public interface PeriodicTableService {
-    List<PeriodicTableProj> atomList() throws Exception;
+    List<PeriodicTableProj> atomList();
 
-    Periodic atomDetail(Object o1) throws Exception;
+    Periodic atomDetail(String atomName);
 
-    Periodic atomInfo(Object o1) throws Exception;
-
-    int insertPeriodic(Periodic periodic) throws Exception;
+    int insertPeriodic(Periodic periodic);
 
 }

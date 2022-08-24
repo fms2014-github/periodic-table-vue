@@ -1,6 +1,6 @@
 <template>
-  <div class="lightbox">
-    <router-link :to="{ name: 'Home' }">
+  <div>
+    <router-link class="lightbox" :to="{ name: 'Home' }">
       <slot></slot>
     </router-link>
   </div>
